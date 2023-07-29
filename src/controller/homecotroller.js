@@ -1,19 +1,18 @@
-import connection from "../configs/connnectDB";
-let getHomepage = (req, res) => {
-  //logic
-  let data = [];
-  // simple query
-  let con = connection.query(
-    "SELECT * FROM `users`",
-    function (err, results, fields) {
-      data = results.map((row) => {
-        return row;
-      });
-      return res.render("index.ejs", { dataUser: data });
-    }
-  );
+import connect from "../configs/connnectDB";
+let getHomepage = async (req, res) => {
+  // query database
+  let connection = await connect.connectDB();
+  const [rows, fields] = await connection.execute("SELECT * FROM users");
+  res.render("index.ejs", { dataUser: rows });
 };
+let getDetailPage = async (req, res) => {
+  let connection = await connect.connectDB();
+  let id = req.params.id;
+  let user = await connection.execute("Select * from users where id = ?", [id]);
 
+  return res.send(user);
+};
 module.exports = {
   getHomepage,
+  getDetailPage,
 };
