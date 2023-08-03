@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit Infomation User</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="eidt-user">
+      <form action="/modify-change" method="POST">
+        <input type="text" hidden name="id" value="<%=dataUser[0][0].id%>" />
+        <b>Edit User With ID: <%=dataUser[0][0].id%></b>
+        <div>
+          <label> First Name </label>
+          <input type="text" name="firstName"
+          value="<%=dataUser[0][0].firstName%>"" />
+        </div>
+        <div>
+          <label> Last Name </label>
+          <input
+            type="text"
+            name="lastName"
+            value="<%=dataUser[0][0].lastName%>"
+          />
+        </div>
+        <div>
+          <label> Email </label>
+          <input type="text" name="email" value="<%=dataUser[0][0].email%>" />
+        </div>
+        <div>
+          <label> Address </label>
+          <input
+            type="text"
+            name="address"
+            value="<%=dataUser[0][0].address%>"
+          />
+        </div>
+        <div class="btn-modify">
+          <input type="submit" value="Modify" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

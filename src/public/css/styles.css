@@ -26,3 +26,54 @@ body {
     background-color: #04AA6D;
     color: white;
 }
+
+.create-user-container {
+    text-align: center;
+
+}
+
+.create-user-container form {
+    display: inline-block;
+
+}
+
+.create-user-container form b {
+    font-size: 25px;
+    color: #04AA6D;
+}
+
+.create-user-container form input {
+    float: right;
+    margin-left: 10px;
+}
+
+form label {
+    float: left;
+}
+
+form>div {
+    margin-top: 10px;
+    padding-bottom: 30px;
+}
+
+.submit-button {
+    display: inline-block;
+}
+
+
+.eidt-user {
+    padding-top: 10%;
+    width: 30%;
+    margin: auto;
+    text-align: center;
+}
+
+.eidt-user form input {
+    float: right;
+    margin-left: 10px;
+    width: 70%;
+}
+
+.btn-modify {
+    justify-content: center;
+}
