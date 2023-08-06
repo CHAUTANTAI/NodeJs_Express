@@ -77,3 +77,12 @@ form>div {
 .btn-modify {
     justify-content: center;
 }
+
+.upload-file-container {
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.upload-file-container div {
+    cursor: pointer;
+}
